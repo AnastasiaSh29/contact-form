@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <!-- <div class="body__wrapper"> -->
+
+    <form class="form" name="form" novalidate>
+      <!-- form-header -->
+      <div class="form__header-wrap">
+        <h1 class="form__header">Create Account</h1>
+      </div>
+
+      <fieldset class="form__fieldset">
+        <div class="wrapper-twoInputs">
+          <!-- input-firstName -->
+          <div class="twoInputs">
+            <label class="label" for="input-firstName">First name*</label>
+            <input
+              id="input-firstName"
+              class="form__input form__firstName"
+              name="firstName"
+              type="text"
+              placeholder="enter your first name"
+              minlength="2"
+              maxlength="40"
+              autocomplete="off"
+              required
+            />
+            <span id="input-firstName-error" class="error"></span>
+          </div>
+
+          <!-- input-lastName -->
+          <div class="twoInputs">
+            <label class="label" for="input-lastName">Last name</label>
+            <input
+              id="input-lastName"
+              class="form__input form__lastName"
+              name="lastName"
+              type="text"
+              placeholder="enter your last name"
+              minlength="2"
+              maxlength="40"
+              autocomplete="off"
+            />
+            <span id="error-input-lastName" class="error"></span>
+          </div>
+        </div>
+
+        <!-- input-email -->
+        <div class="">
+          <label class="label" for="input-email">Email*</label>
+          <input
+            id="input-email"
+            class="form__input form__email"
+            name="email"
+            type="email"
+            placeholder="enter your email"
+            autocomplete="off"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            required
+          />
+          <span id="input-email-error" class="error form__email-error"></span>
+        </div>
+
+        <div class="wrapper-twoInputs">
+          <!-- input-password -->
+          <div class="twoInputs">
+            <label class="label" for="input-password">Password*</label>
+            <input
+              id="input-password"
+              class="form__input form__password"
+              name="password"
+              type="password"
+              placeholder="enter your password"
+              minlength="8"
+              maxlength="40"
+              autocomplete="off"
+              required
+            />
+            <span id="input-password-error" class="error"></span>
+          </div>
+
+          <!-- input-confirmPassword -->
+          <div class="twoInputs">
+            <label class="label" for="input-confirmPassword"
+              >Confirm password*</label
+            >
+            <input
+              id="input-confirmPassword"
+              class="form__input form__confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder="enter your password again"
+              minlength="8"
+              maxlength="40"
+              autocomplete="off"
+              required
+            />
+            <span id="input-confirmPassword-error" class="error"></span>
+          </div>
+        </div>
+
+        <div class="wrapper-twoInputs">
+          <!-- input-radio -->
+          <div class="twoInputs">
+            <h2 class="twoInputs__header">Gender:</h2>
+
+            <input
+              class="input-check"
+              type="radio"
+              name="gender"
+              id="male"
+              value="male"
+            />
+            <label class="label-check" for="male">Male</label>
+
+            <input
+              class="input-check"
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+            />
+            <label class="label-check" for="female">Female</label>
+          </div>
+
+          <!-- input-checkbox -->
+          <div class="twoInputs">
+            <h2 class="twoInputs__header">Hobbies</h2>
+            <input
+              class="input-check"
+              type="checkbox"
+              name="hobbies"
+              id="music"
+              value="music"
+            />
+            <label class="label-check" for="music">Music</label>
+            <input
+              class="input-check"
+              type="checkbox"
+              name="hobbies"
+              id="sports"
+              value="sports"
+            />
+            <label class="label-check" for="sports">Sports</label>
+            <input
+              class="input-check"
+              type="checkbox"
+              name="hobbies"
+              id="travel"
+              value="travel"
+            />
+            <label class="label-check" for="travel">Travel</label>
+            <input
+              class="input-check"
+              type="checkbox"
+              name="hobbies"
+              id="movies"
+              value="movies"
+            />
+            <label class="label-check" for="movies">Movies</label>
+          </div>
+        </div>
+
+        <!-- input-select -->
+        <div class="wrapper-twoInputs">
+          <div class="twoInputs">
+            <h2 class="twoInputs__header">Source of income</h2>
+            <select class="input" for="input-source">
+              <option id="input-source" value="employed">Employed</option>
+              <option id="input-source" value="unemployed">Unemployed</option>
+            </select>
+          </div>
+
+          <!-- input-range -->
+          <div class="twoInputs">
+            <label class="label" for="input-income">Income</label>
+            <input
+              id="input-income"
+              class="input form__income"
+              name="income"
+              type="range"
+              value="20"
+              min="20"
+              maxlength="300"
+              step="10"
+              oninput="rangevalue.value=value"
+            />
+            <output class="output" id="rangevalue">20<span>K</span></output>
+          </div>
+        </div>
+
+        <div class="wrap-twoInputs">
+          <!-- input-file -->
+          <div class="twoInputs">
+            <label class="label" for="input-file">Upload profile picture</label>
+            <input
+              id="input-file"
+              class="input form__file"
+              name="income"
+              type="file"
+              placeholder="Choose file"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- input-age -->
+          <div class="twoInputs">
+            <label class="label" for="input-age">Age</label>
+            <input
+              id="input-age"
+              class="input form__age"
+              name="age"
+              type="text"
+              value="18"
+              minlength="1"
+              maxlength="3"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <!-- input-bio -->
+        <div class="oneInput">
+          <label class="label" for="input-bio">Bio</label>
+          <textarea
+            id="input-bio"
+            class="input form__bio"
+            name="bio"
+            type="text"
+          ></textarea>
+        </div>
+        
+      </fieldset>
+
+      <div class="form__btn">
+        <button class="form__btn-submit" type="submit" value="Send to server">
+          Create
+        </button>
+      </div>
+    </form>
+
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>
